@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Emilio ❤️</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(#ffdde1, #ee9ca7);
+  text-align: center;
+  padding: 25px;
+}
+
+h1, h2 {
+  color: #b30059;
+}
+
+button {
+  padding: 12px 18px;
+  margin: 6px;
+  border-radius: 25px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+.cry {
+  font-size: 60px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Valentine’s My Love ❤️</h1>
+<p>Do you want to open me?</p>
+
+<button onclick="yes()">Yes 💖</button>
+<button onclick="no()">No 🙃</button>
+
+<div id="content"></div>
+
+<script>
+function no() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><div class='cry'>😭</div><h2>Please go back</h2><p>This was made with so much love.</p></div>";
+}
+
+// Main menu
+function yes() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'>" +
+  "<h2>Welcome, My Love 💕</h2>" +
+  "<button onclick='letter()'>💌 Love Letter</button>" +
+  "<button onclick='song()'>🎧 Our Song</button>" +
+  "<button onclick='reasons()'>🫙 100 Reasons I Love You</button>" +
+  "<button onclick='memories()'>📅 Our Journey</button>" +
+  "<button onclick='photo()'>📸 A Little Peek</button>" +
+  "<button onclick='ending()'>❤️ Final Words</button>" +
+  "</div>";
+}
+
+// Love Letter
+function letter() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><h2>💌 My Love, Emilio</h2>" +
+  "<p>Being with you has changed me in the most beautiful ways. Over this past year and more, you have shown me what genuine love looks like — the kind that is patient, intentional, and full of effort.</p>" +
+  "<p>I see how hard you work. I see how much you try. I see the way you plan dates, the small gifts you give me, the way you show up even when life is heavy.</p>" +
+  "<p>You encourage me, you support me, and you believe in me in ways I didn’t even know I needed. Loving you feels safe, calm, exciting, and real all at once.</p>" +
+  "<p>I’m so grateful for you, Emilio. I choose you — today, tomorrow, and always ❤️</p>" +
+  "<button onclick='yes()'>⬅ Back</button>" +
+  "</div>";
+}
+
+// Our Song
+function song() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><h2>🎧 This Song Reminds Me of You</h2>" +
+  "<p><strong>Best Part – Daniel Caesar ft. H.E.R</strong></p>" +
+  "<p>This song reminds me of you because loving you feels gentle, safe, and effortless. You are my peace, my comfort, and the part of my life that makes everything better.</p>" +
+  "<p>You are my best part, Emilio ❤️</p>" +
+  "<a href='https://www.youtube.com/watch?v=hKgl5-lkT8U' target='_blank'>▶ Click to listen</a><br><br>" +
+  "<button onclick='yes()'>⬅ Back</button>" +
+  "</div>";
+}
+
+// 100 Reasons
+let loveReasons = [
+"Your smile","Your kindness","Your hard work","Your effort",
+"Your patience with me","Your encouragement","Your honesty",
+"The way you plan dates","The small gifts you give me",
+"Your ambition","Your discipline","Your hugs","Your voice",
+"The way you listen","How you make me feel safe",
+"Your loyalty","Your respect","Your warmth","Your laughter",
+"How you push me to be better"
+];
+
+while (loveReasons.length < 100) {
+  loveReasons.push("Another beautiful reason I love you ❤️");
+}
+
+let i = 0;
+function reasons() {
+  if (i < loveReasons.length) {
+    document.getElementById("content").innerHTML =
+    "<div class='card'><h2>Reason " + (i+1) + "</h2>" +
+    "<p>" + loveReasons[i] + "</p>" +
+    "<button onclick='reasons()'>Next ❤️</button><br>" +
+    "<button onclick='yes()'>⬅ Back</button>" +
+    "</div>";
+    i++;
+  } else {
+    document.getElementById("content").innerHTML =
+    "<div class='card'><h2>100 Reasons ❤️</h2><p>And I still have more.</p>" +
+    "<button onclick='yes()'>⬅ Back</button>" +
+    "</div>";
+    i = 0; // reset counter if they want to view again
+  }
+}
+
+// Memories
+function memories() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><h2>📅 Our Journey</h2>" +
+  "<p>One year of love ❤️</p>" +
+  "<p>Two years coming this September 💕</p>" +
+  "<p>So many memories, and a lifetime to go.</p>" +
+  "<button onclick='yes()'>⬅ Back</button>" +
+  "</div>";
+}
+
+// Photo
+function photo() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><h2>📸 A Little Peek</h2>" +
+  "<p>This is where I’d put a picture of us.</p>" +
+  "<p>(I’ll show you in person 😘)</p>" +
+  "<button onclick='yes()'>⬅ Back</button>" +
+  "</div>";
+}
+
+// Final Words
+function ending() {
+  document.getElementById("content").innerHTML =
+  "<div class='card'><h2>❤️ Final Words</h2>" +
+  "<p>I love you deeply, intentionally, and endlessly.</p>" +
+  "<p>Happy Valentine’s Day, my best part.</p>" +
+  "<button onclick='yes()'>⬅ Back</button>" +
+  "</div>";
+}
+</script>
+
+</body>
+</html>

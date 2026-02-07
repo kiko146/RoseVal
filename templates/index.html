@@ -4,15 +4,27 @@
 <title>For Emilio ❤️</title>
 
 <style>
+
 body {
   font-family: Arial;
   background: linear-gradient(#ffdde1, #ee9ca7);
   text-align: center;
   padding: 25px;
+  margin: 0;
+  min-height: 100vh; /* ensure it covers the whole screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* top align initially */
 }
 
-h1, h2 {
-  color: #b30059;
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+  max-width: 95%; /* responsive width on small screens */
+  box-sizing: border-box;
 }
 
 button {
@@ -24,18 +36,26 @@ button {
   color: white;
   font-size: 15px;
   cursor: pointer;
+  white-space: nowrap; /* prevents buttons from breaking */
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 25px;
+/* Make sure the buttons wrap nicely on small screens */
+.card button {
+  display: inline-block;
+  margin: 5px;
 }
 
-.cry {
-  font-size: 60px;
+/* Optional: smaller font for small devices */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
 }
+
 </style>
 </head>
 
@@ -161,3 +181,4 @@ function ending() {
 
 </body>
 </html>
+
